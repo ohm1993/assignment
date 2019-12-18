@@ -1,0 +1,1 @@
+angular.module('sampleApp', ['ngRoute', 'appRoutes', 'NerdCtrl','InventoryService','UserService','InventoryCtrl','InventoryListCtrl','Login','ui.bootstrap']);

@@ -1,0 +1,54 @@
+
+    <div class="page-header text-center"><h1>Add Inventory</h1></div>
+    
+            <form name="form" ng-submit="addinventory(form.$valid)" role="form">
+                    <div class="form-group" ng-class="{ 'has-error': form.productId.$dirty && form.productId.$error.required }">
+                        <label for="productId">Product Id</label>
+                        <input type="text" name="productId" id="productId" class="form-control" ng-model="data.productId" required />
+                        <span ng-show="form.productId.$dirty && form.productId.$error.required" class="help-block">Product id is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.productName.$dirty && form.productName.$error.required }">
+                        <label for="productName">Product name</label>
+                        <input type="text" name="productName" id="productName" class="form-control" ng-model="data.productName" required />
+                        <span ng-show="form.productName.$dirty && form.productName.$error.required" class="help-block">Product name is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.vendor.$dirty && form.vendor.$error.required }">
+                        <label for="vendor">Vendor</label>
+                        <input type="text" name="vendor" id="vendor" class="form-control" ng-model="data.vendor" required />
+                        <span ng-show="form.vendor.$dirty && form.vendor.$error.required" class="help-block">Vendor name is required</span>
+                    </div>
+                     <div class="form-group" ng-class="{ 'has-error': form.mrp.$dirty && form.mrp.$error.required }">
+                        <label for="mrp">MRP</label>
+                        <input type="text" name="mrp" id="mrp" class="form-control" ng-model="data.mrp" required />
+                        <span ng-show="form.mrp.$dirty && form.mrp.$error.required" class="help-block">MRP is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.batchNum.$dirty && form.batchNum.$error.required }">
+                        <label for="batchNum">Batch Number</label>
+                        <input type="text" name="batchNum" id="batchNum" class="form-control" ng-model="data.batchNum" required />
+                        <span ng-show="form.batchNum.$dirty && form.batchNum.$error.required" class="help-block">Password is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.batchDate.$dirty && form.batchDate.$error.required }">
+                        <label for="batchDate">Batch Date</label>
+                        <input type="date" name="batchDate" id="batchDate" class="form-control" ng-model="data.batchDate" placeholder="yyyy-MM-dd" required />
+                        <span ng-show="form.batchDate.$dirty && form.batchDate.$error.required" class="help-block">Date is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.quantity.$dirty && form.quantity.$error.required }">
+                        <label for="quantity">Quantity</label>
+                        <input type="text" name="quantity" id="quantity" class="form-control" ng-model="data.quantity" required />
+                        <span ng-show="form.quantity.$dirty && form.quantity.$error.required" class="help-block">Quantity is required</span>
+                    </div>
+                    
+                    <div class="form-group" ng-class="{ 'has-error': form.quantity.$dirty && form.quantity.$error.required }">
+                        <label for="status">Status</label>
+                        <select class="form-control" name="status" id="status" ng-model="data.status" required>
+                            <option value="approved">Approved</option>
+                            <option value="pending">Pending</option>
+                          </select>
+                        <span ng-show="form.status.$dirty && form.status.$error.required" class="help-block">Status is required</span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            
+      
