@@ -1,4 +1,4 @@
-angular.module('Login', []).controller('LoginController', function($scope,$location,UserService) {
+angular.module('Login', []).controller('LoginController', function($scope,$location,$rootScope,UserService) {
 	console.log("in nerd controller loged in user is",UserService.IsAuthenticated());
 		(function initController() {
 			UserService.ClearCredentials();
@@ -9,7 +9,7 @@ angular.module('Login', []).controller('LoginController', function($scope,$locat
 			.then(function(user) {
 				if(user){
 					UserService.SetCredentials(user);
-					$scope.logout = false;
+					$rootScope.authenticated = true;
 					$location.path('/addInventory');
 					alert("loged in successfull",user);
 				}else{

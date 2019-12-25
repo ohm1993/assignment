@@ -36,11 +36,12 @@
 				<a class="navbar-brand" href="#">Inventory Management</a>
 				</div>
 				<ul class="nav navbar-nav">
-				<li class="active" ng-if="show == true"><a href="/">Login</a></li>
 				<li><a href="/addInventory">Add inventory</a></li>
 				<li><a href="/listInventory">List inventory</a></li>
-				<li><a href="" ng-if="logout == true" ng-click="logoutUser()">Logout</a></li>
 				</ul>
+				<ul class="nav navbar-nav" style="float: right;">
+					<li><a ng-show="authenticated" ng-click="logoutUser()">Logout</a></li>
+			    </ul>		
 			</div>
 	</nav>
 	<div class="container">
